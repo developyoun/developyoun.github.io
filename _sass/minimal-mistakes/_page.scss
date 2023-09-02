@@ -28,6 +28,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
           flex-direction: column;
+  overflow-y: scroll;
 }
 
 .initial-content,
@@ -113,7 +114,7 @@ body {
   p,
   li,
   dl {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   /* paragraph indents */
@@ -131,7 +132,7 @@ body {
 
   a:not(.btn) {
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
 
       img {
         box-shadow: 0 0 10px rgba(#000, 0.25);

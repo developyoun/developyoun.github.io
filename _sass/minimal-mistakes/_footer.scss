@@ -14,7 +14,8 @@
   animation: $intro-transition;
   -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
-  background-color: $footer-background-color;
+  //background-color: $footer-background-color;
+  background-color: $background-color;
 
   footer {
     @include clearfix;
@@ -34,7 +35,7 @@
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 
@@ -64,7 +65,8 @@
     padding-bottom: 5px;
     font-family: $sans-serif-narrow;
     font-size: $type-size-6;
-    text-transform: uppercase;
+    //text-transform: uppercase;
+    text-transform: capitalize;
   }
 
   li + li:before {
