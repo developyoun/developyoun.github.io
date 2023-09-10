@@ -12,3 +12,20 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+# sidebar
+docs:
+  - title: "study"
+    children:
+      - title: "Real MySQL"
+        url: /real-mysql
+        category: "real-mysql"
+
+  - title: "tech"
+    children:
+      - title: "Spring"
+        url: /spring
+        category: "spring"
+      - title: "AWS"
+        url: /aws
+        category: "aws"
