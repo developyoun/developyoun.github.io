@@ -23,6 +23,9 @@ docs:
       - title: "쿠버네티스/도커"
         url: /kubenetes-docker
         category: "쿠버네티스/도커"
+      - title: "Clean Code"
+        url: /clean-code
+        category: "clean-code"
 
   - title: "tech"
     children:
