@@ -20,6 +20,9 @@ docs:
       - title: "Real MySQL"
         url: /real-mysql
         category: "real-mysql"
+      - title: "쿠버네티스/도커"
+        url: /kubenetes-docker
+        category: "쿠버네티스/도커"
 
   - title: "tech"
     children:
