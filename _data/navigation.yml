@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Introduce"
+    url: /introduce
   - title: "카테고리"
     url: /categories
   - title: '태그'
@@ -26,6 +28,9 @@ docs:
       - title: "Clean Code"
         url: /clean-code
         category: "clean-code"
+      - title: "Design Pattern"
+        url: /design-pattern
+        category: "디자인패턴"
 
   - title: "tech"
     children:

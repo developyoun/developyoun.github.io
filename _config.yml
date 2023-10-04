@@ -107,7 +107,7 @@ author:
   name             : "JAO JAO"
   avatar           : "/assets/images/avatar.jpg"
   bio              : "**안뇽하세요!**"
-  location         : "경기도 수원"
+#  location         : "경기도 수원"
   email            :
   links:
     - label: "Email"
