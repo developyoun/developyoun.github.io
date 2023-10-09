@@ -149,15 +149,18 @@ spring:
 ```
 - 템플릿 캐시의 TTL 설정
 
+
+
 10. 타임리프의 사용자 정의 프로퍼티 설정
 ```yaml
 spring:
-  thymeleaf:
-    properties:
-      prop1: value1
-      prop2: value2
-
+	thymeleaf:
+		properties:
+			prop1: value1
+			prop2: value2
 ```
+
+
 
 > 뷰 리졸버 (View Resolver) ?
 > 스프링 백엔드에서 데이터를 처리하거나 가지고 왔다면, 이 데이터를 View의 영역으로 전달을 해야 한다. 이때 View를 어떤 것을 사용할지 자유롭게 설정을 할 수 있는데 이 설정 역할을 하는 것이 View Resolver라고 생각하면 된다.
