@@ -40,7 +40,10 @@ spring:
 - 템플릿 경로를 설정하는 것인데, 타임리프를 의존성 처리하면 자동으로 생성된다고 함. (나 같은 경우는 수동으로 추가해주었음)
 - ex) /templates/home.html
 
-3. templates 디렉토리에 html을 생성하기
+3. templates 디렉토리에 html을 생성하기  
+
+
+
 ![](https://i.imgur.com/K8DQF33.png)
 
 ```html
@@ -162,6 +165,6 @@ spring:
 
 
 
-> 뷰 리졸버 (View Resolver) ?
-> 스프링 백엔드에서 데이터를 처리하거나 가지고 왔다면, 이 데이터를 View의 영역으로 전달을 해야 한다. 이때 View를 어떤 것을 사용할지 자유롭게 설정을 할 수 있는데 이 설정 역할을 하는 것이 View Resolver라고 생각하면 된다.
+> 뷰 리졸버 (View Resolver) ?  
+> 스프링 백엔드에서 데이터를 처리하거나 가지고 왔다면, 이 데이터를 View의 영역으로 전달을 해야 한다. 이때 View를 어떤 것을 사용할지 자유롭게 설정을 할 수 있는데 이 설정 역할을 하는 것이 View Resolver라고 생각하면 된다.  
 > ref: https://needneo.tistory.com/204
