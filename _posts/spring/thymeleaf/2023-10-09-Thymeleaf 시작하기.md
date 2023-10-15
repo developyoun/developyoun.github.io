@@ -42,8 +42,6 @@ spring:
 
 3. templates 디렉토리에 html을 생성하기  
 
-
-
 ![](https://i.imgur.com/K8DQF33.png)
 
 ```html
