@@ -37,6 +37,6 @@ docs:
       - title: "Spring"
         url: /spring
         category: "spring"
-      - title: "AWS"
-        url: /aws
-        category: "aws"
+      - title: "Server"
+        url: /server
+        category: "server"
