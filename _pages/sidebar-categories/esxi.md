@@ -10,5 +10,5 @@ sidebar:
 
 {% assign posts = site.tags.esxi %}
 {% for post in posts %}
-{% include archive-single.html type=page.entries_layout %}
+    {% include archive-single.html type=page.entries_layout %}
 {% endfor %}

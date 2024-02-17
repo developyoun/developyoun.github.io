@@ -5,7 +5,7 @@ permalink: /spring
 author_profile: true
 types: posts
 sidebar:
-    nav: "docs"
+    - nav: "docs"
 ---
 
 {% assign posts = site.tags.spring %}
