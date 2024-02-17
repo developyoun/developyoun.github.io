@@ -24,9 +24,9 @@
           {% for child in nav.children %}
 
           {% assign post_cnt = 0 %}
-          {% for category in site.categories %}
-            {% if category[0] == child.category %}
-                {% assign post_cnt = category[1].size %}
+          {% for tag in site.tags %}
+            {% if tag[0] == child.tags %}
+                {% assign post_cnt = tag[1].size %}
             {% endif %}
           {% endfor %}
 

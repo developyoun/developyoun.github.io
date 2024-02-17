@@ -8,7 +8,7 @@ sidebar:
     nav: "docs"
 ---
 
-{% assign posts = site.categories.spring %}
+{% assign posts = site.tags.spring %}
 {% for post in posts %}
     {% include archive-single.html type=page.entries_layout %}
 {% endfor %}

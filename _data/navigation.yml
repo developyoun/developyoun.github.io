@@ -17,26 +17,26 @@ main:
 
 # sidebar
 docs:
-  - title: "study"
-    children:
-      - title: "Real MySQL"
-        url: /real-mysql
-        category: "real-mysql"
-      - title: "쿠버네티스/도커"
-        url: /kubenetes-docker
-        category: "쿠버네티스/도커"
-      - title: "Clean Code"
-        url: /clean-code
-        category: "clean-code"
-      - title: "Design Pattern"
-        url: /design-pattern
-        category: "디자인패턴"
-
-  - title: "tech"
+  - title: "tags"
     children:
       - title: "Spring"
         url: /spring
-        category: "spring"
+        tags: "spring"
       - title: "Server"
         url: /server
-        category: "server"
+        tags: "server"
+      - title: "Settings"
+        url: /settings
+        tags: "settings"
+      - title: "MySQL"
+        url: /mysql
+        tags: "mysql"
+      - title: "AWS"
+        url: /aws
+        tags: "aws"
+      - title: "ESXI"
+        url: /esxi
+        tags: "esxi"
+      - title: "Study"
+        url: /study
+        tags: "study"
