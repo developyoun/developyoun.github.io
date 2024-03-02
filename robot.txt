@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://developyoun.github.io/sitemap.xml
