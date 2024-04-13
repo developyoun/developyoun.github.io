@@ -38,7 +38,7 @@ Jmeter의 도입 사례나 레퍼런스가 가장 많고 활발한 것 같아 �
 
 Counter는 반복적으로 진행하는 테스트 케이스들을 구분하기 위한 일종의 `unique id`로 보시면 됩니다.
 
-!https://imgur.com/QJK3Qw9.png
+![](https://imgur.com/QJK3Qw9.png)
 
 위 설정에서 *Exported Variable Name*을 지정한대로, Counter 변수를 내부 로직에 넣을 수 있습니다
 
@@ -48,9 +48,7 @@ Counter는 반복적으로 진행하는 테스트 케이스들을 구분하기 �
 
 Thread Group은 테스트 케이스 그룹이기에, 우리는 이 그룹 안에서 동작하기 위한 로직을 설정하면 됩니다.
 
-!https://imgur.com/tdlQh0M.png
-
-!https://imgur.com/undefined.png
+![](https://imgur.com/tdlQh0M.png)
 
 - Number of Threads: 동시에 사용할 사용자(스레드) 수
 - Ramp-up period: 사용자 생성마다 걸리는 시간
@@ -76,7 +74,7 @@ Thread Group → Add → Sampler → WebSocket Open Connection
 
 웹소켓을 오픈할 서버, 포트, 경로를 설정합니다.
 
-!https://i.imgur.com/LiZlGo6.png
+![](https://i.imgur.com/LiZlGo6.png)
 
 Name의 ${counter}에는 Counter에서 지정한 Exported Variable Name을 넣습니다. 
 
@@ -94,7 +92,7 @@ Thread Group → Add → Sampler → WebSocket Write Sampler
 
 웹소켓이 오픈되었으니, 이를 연결하기 위한 일종의 핸드쉐이킹을 *Connect* 부분에서 처리합니다.
 
-!https://imgur.com/5YD531m.png
+![](https://imgur.com/5YD531m.png)
 
 Name의 ${counter}는 Open할 때와 마찬가지로 unique한 구분값을 두기위한 변수입니다.
 
@@ -116,7 +114,7 @@ Connect 부분을 설명할 때, 일종의 핸드쉐이킹이라는 표현을 �
 
 즉, Connect를 요청해서 정상적으로 통신가능하게 된다면 이에 따른 응답을 수신받을 수 있습니다. 이 응답을 받도록 Sampler을 추가하겠습니다.
 
-!https://imgur.com/vu1pY8M.png
+![](https://imgur.com/vu1pY8M.png)
 
 Read Sampler는 별도로 설정할건 없습니다.
 
@@ -128,7 +126,7 @@ Subscribe에서는 메시지 송신과 수신을 받을 일종의 경로를 지�
 
 Subscribe는 Connect 부분과 크게 다르지 않습니다. 요청 데이터에만 약간의 차이가 있습니다.
 
-!https://imgur.com/LGnMVRs.png
+![](https://imgur.com/LGnMVRs.png)
 
 Request Data를 보시면, **SUBSCRIBE** 메시지가 들어갔고, 전송 구분을 위한 `sub-${counter}` 및 destination 경로를 넣었습니다.
 
@@ -144,7 +142,7 @@ Thread Group → Add → Sampler → WebSocket Write Sampler
 
 구독까지 완료되었다면 메시지 전송을 확인하면 됩니다. 
 
-!https://imgur.com/W9wxCgj.png
+![](https://imgur.com/W9wxCgj.png)
 
 Request data에서는 **SEND** 메시지를 넣고, 발송지인 destination을 설정한 뒤, 전달할 규격에 맞는 데이터를 전달하면 됩니다.
 
@@ -160,7 +158,7 @@ Thread Group → Add → Sampler → WebSocket Read Sampler
 
 앞서 Read Sampler를 작성했었는데, 마찬가지로 동일한 커넥션이면 크게 설정할 부분은 없습니다.
 
-!https://imgur.com/8fJH7wd.png
+![](https://imgur.com/8fJH7wd.png)
 
 ### Unsubscribe
 
@@ -168,7 +166,7 @@ Thread Group → Add → Sampler → WebSocket Write Sampler
 
 메시지 송수신까지 완료했다면 웹소켓의 커넥션을 끊어줘야합니다. Unsubscribe에서는 커넥션을 끊기 위한 일련의 과정 중 하나인 “구독 해지”를 진행합니다.
 
-!https://imgur.com/EU0aWXf.png
+![](https://imgur.com/EU0aWXf.png)
 
 어떤 구독을 끊을지는 Request data에 `sub-${counter}` 에 지정합니다.
 
@@ -184,7 +182,7 @@ Thread Group → Add → Sampler → WebSocket Write Sampler
 
 Disconnect는 또다른 과정인 연결을 해제합니다.
 
-!https://imgur.com/705PW1R.png
+![](https://imgur.com/705PW1R.png)
 
 ```
 ["DISCONNECT\n\n\u0000"]
@@ -196,7 +194,7 @@ Thread Group → Add → Sampler → WebSocket Close
 
 최종적으로 웹소켓을 닫습니다. 
 
-!https://imgur.com/vtHu8g0.png
+![](https://imgur.com/vtHu8g0.png)
 
 Name을 제외하고는 기본값만을 사용했습니다.
 
@@ -212,7 +210,7 @@ Summary Report에서는 각 sampler들이 동작했을 때의 정보들을 수�
 
 다양한 정보들이 있으니 선별하여 사용자가 적절하게 선별하면 될 것 같습니다.
 
-!https://imgur.com/HoMody7.png
+![](https://imgur.com/HoMody7.png)
 
 ### View Results Tree
 
@@ -222,7 +220,7 @@ View Results Tree에서는 내가 Request한 데이터의 정보 뿐 아니라, 
 
 저는 테스트 실패 시에 디버깅하는 용도로 많이 사용했던거 같습니다.
 
-!https://imgur.com/yEw6kRM.png
+![](https://imgur.com/yEw6kRM.png)
 
 ### 5️⃣ 기타
 
