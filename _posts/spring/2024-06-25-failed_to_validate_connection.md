@@ -36,7 +36,7 @@ Spring 커넥션(hikari-pool)의 `max-lifetime` 값은, 이 시간이 지나면 
 ```yaml
 spring:
   datasource:
-		hikari:
+    hikari:
 			max-lifetime: 1800000 # 30분
 ```
 
