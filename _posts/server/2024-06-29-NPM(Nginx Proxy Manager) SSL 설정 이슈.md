@@ -11,6 +11,7 @@ toc_sticky: true
 toc_label: Contents
 ---
 
+
 도커에서 Nginx Proxy Manager(이하 NPM) 이미지를 재빌드하면서 클라우드플레어에 SSL을 다시 등록해야하는 상황이 있었는데, 갑자기 아래와 같은 이슈가 발생했습니다.
 
 ```
@@ -18,6 +19,7 @@ CommandError: The 'certbot dns cloudflare._internal.dns cloudflare' plugin error
 You may need to remove or update this plugin. 
 The Certbot log will contain the full error details and this should be reported to the plugin developer.
 ```
+
 
 기존에는 lastest 버전을 사용했기에 버전 문제인 줄 알았는데, 그건 또 아니었습니다.
 
@@ -28,6 +30,7 @@ The Certbot log will contain the full error details and this should be reported 
 1.도커로 올라간 컨테이너에 접속한다.
 
 `docker exec -it <컨테이너 명> /bin/bash` 
+
 
 2.`certbot`을 입력해서 Cloudflare-DNS 플러그인에서 이슈가 발생하는지 확인한다.
 
@@ -42,7 +45,9 @@ You may need to remove or update this plugin. The Certbot log will contain the f
 
 3.`pip uninstall certbot-dns-cloudflare` 명령을 입력하여 `certbot-dns-cloudflare` 패키지를 삭제한다.
 
+
 4.다시 한번 `certbot`을 입력하여 오류가 출력되는지 확인한다.
+
 
 저 같은 경우엔 이번엔 출력이 안되고 아래와 같은 로그가 나왔습니다.
 
@@ -57,7 +62,9 @@ You'll need to manually configure your web server to use the resulting certifica
 
 `pip install certbot-dns-cloudflare` 
 
+
 6.마지막으로, certbot을 입력하여 오류 메시지를 체크합니다. (`certbot`)
+
 
 이렇게 해결이 되었고 SSL 등록까지 되는 걸로 확인했습니다 :D
 
