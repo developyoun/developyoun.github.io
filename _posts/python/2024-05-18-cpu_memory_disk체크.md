@@ -1,13 +1,12 @@
 ---
 title: python: cpu & memory & disk 체크
-
 categories:
-- python
+  - python
 
 tags:
-- cpu
-- memory
-- disk
+  - cpu
+  - memory
+  - disk
 
 toc: true
 toc_sticky: true
@@ -217,3 +216,4 @@ def entry_disk():
     percent = entry_disk_usage.percent
     print(f'Entry Disk total: {byte_to_gb(total):10.3f}GB, used: {byte_to_gb(used):10.3f}GB, free:{byte_to_gb(free):10.3f}GB, percent: {percent}%')
 ```
+
