@@ -12,7 +12,6 @@ toc: true
 toc_sticky: true
 toc_label: Contents
 ---
-
 일반적으로 CPU나 Memory는 작업관리자나, 커맨드 혹은 터미널 명령어를 통해 조회할 수 있지만,
 
 파이썬의 `psutils` 모듈을 활용하면 편하게 현재 PC의 메모리와 CPU를 체크할 수 있습니다.
