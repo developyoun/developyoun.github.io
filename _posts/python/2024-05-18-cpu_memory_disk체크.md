@@ -1,5 +1,5 @@
 ---
-title: python: cpu & memory & disk 체
+title: python: cpu & memory & disk 체크
 
 categories:
 - python
